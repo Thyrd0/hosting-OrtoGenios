@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrtoGenios - Escribe la Palabra</title>
+    <link rel="icon" href="imagenes/logo-copy.ico">
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <div class="logo-container-2">
+      <img src="imagenes/logo.jpg" alt="Logo OrtoGenios" />
+    </div>
+    <div class="logo-container-3">
+      <img src="imagenes/logo.jpg" alt="Logo OrtoGenios" />
+    </div>
+    <div class="game-container">
+      <div class="floating-particles"></div>
+
+      <div class="header">
+        <div class="logo-container">
+          <img
+            id="logoImage"
+            class="logo"
+            src=""
+            alt="OrtoGenios Logo"
+            style="display: none"
+          />
+          <div class="logo-placeholder">
+            <div class="logo-text">OrtoGenios</div>
+            <div class="logo-subtitle">Aprende jugando</div>
+          </div>
+        </div>
+        <h1>🎨 Escribe la Palabra 🎨</h1>
+
+        <div class="level-info">
+          <div class="level">
+            Nivel: <span id="currentLevel">1</span> -
+            <span id="levelName">Principiante</span>
+          </div>
+          <div class="score">Puntos: <span id="score">0</span></div>
+        </div>
+
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div style="font-size: 0.9rem; margin-top: 5px; color: #718096">
+            Progreso: <span id="progressText">0/10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-value" id="correctAnswers">0</div>
+          <div class="stat-label">Correctas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="totalQuestions">0</div>
+          <div class="stat-label">Total</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="accuracy">0%</div>
+          <div class="stat-label">Precisión</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="streak">0</div>
+          <div class="stat-label">Racha</div>
+        </div>
+      </div>
+
+      <div class="image-container">
+        <img
+          id="wordImage"
+          class="word-image"
+          src=""
+          alt="Imagen de la palabra"
+        />
+      </div>
+
+      <div class="input-section">
+        <input
+          type="text"
+          id="wordInput"
+          class="word-input"
+          placeholder="Escribe la palabra aquí..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-primary" onclick="checkAnswer()">
+          ✓ Verificar
+        </button>
+        <button class="btn btn-secondary" onclick="showHint()">💡 Pista</button>
+        <button class="btn btn-secondary" onclick="skipWord()">
+          ⏭️ Saltar
+        </button>
+        <button class="btn btn-secondary" onclick="toggleLevelSelector()">
+          🎯 Niveles
+        </button>
+      </div>
+
+      <div class="level-selector" id="levelSelector">
+        <h3 style="margin-bottom: 15px">Selecciona tu nivel:</h3>
+        <div class="level-buttons">
+          <button class="level-btn" onclick="selectLevel(1)">
+            Nivel 1 - Principiante
+          </button>
+          <button class="level-btn" onclick="selectLevel(2)">
+            Nivel 2 - Intermedio
+          </button>
+          <button class="level-btn" onclick="selectLevel(3)">
+            Nivel 3 - Avanzado
+          </button>
+        </div>
+      </div>
+
+      <div class="feedback" id="feedback">
+        ¡Bienvenido! Observa la imagen y escribe la palabra correcta 🌟
+      </div>
+    </div>
+
+    <script src="js/script.js" ;></script>
+  </body>
+</html>
